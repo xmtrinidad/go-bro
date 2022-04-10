@@ -23,20 +23,21 @@ func main() {
 	fmt.Printf("Wecome %v you have made %v total memes\n", memeName, totalMemes)
 	fmt.Printf("There are still %v memes to make.\n", remainingMemes)
 
-	var memes [10]string
+	var memes []string
 
 	var userMeme string
 	// passing in a pointer
 	fmt.Scan(&userMeme)
 
-	memes[0] = memeName + " created the " + userMeme + " meme"
+	// Array stuff
+	memes = append(memes, memeName+" created the "+userMeme+" meme")
 
 	remainingMemes = remainingMemes - 1
 
 	fmt.Printf(memes[0])
 	fmt.Printf("There are %v memes remaining\n", remainingMemes)
 
-	fmt.Printf("The memes array looks like this: %v\n", memes)
-	fmt.Printf("The memes array type is: %T\n", memes)
-	fmt.Printf("The memes array length is: %v\n", len(memes))
+	fmt.Printf("The memes slice looks like this: %v\n", memes)
+	fmt.Printf("The memes slice type is: %T\n", memes)
+	fmt.Printf("The memes slice length is: %v\n", len(memes))
 }
