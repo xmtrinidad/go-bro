@@ -56,4 +56,10 @@ func main() {
 	// 	fmt.Printf("The memes slice length is: %v\n", len(memes))
 	// }
 
+	if len(memes) < 4 {
+		fmt.Println("Memes slice is less than 3")
+	} else {
+		fmt.Println("More than 3 memes")
+	}
+
 }
