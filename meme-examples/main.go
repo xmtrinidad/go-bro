@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func main() {
 	// Shorthand way to declare var and infer type
@@ -24,20 +27,33 @@ func main() {
 	fmt.Printf("There are still %v memes to make.\n", remainingMemes)
 
 	var memes []string
-
-	var userMeme string
-	// passing in a pointer
-	fmt.Scan(&userMeme)
-
-	// Array stuff
-	memes = append(memes, memeName+" created the "+userMeme+" meme")
-
-	remainingMemes = remainingMemes - 1
-
-	fmt.Printf(memes[0])
-	fmt.Printf("There are %v memes remaining\n", remainingMemes)
-
-	fmt.Printf("The memes slice looks like this: %v\n", memes)
-	fmt.Printf("The memes slice type is: %T\n", memes)
+	memes = append(memes, "Meme 1", "Meme 2", "Meme 3")
+	fmt.Printf("The memes slice looks like this %v\n", memes)
 	fmt.Printf("The memes slice length is: %v\n", len(memes))
+
+	for index, meme := range memes {
+		fmt.Printf("The index is %v and the meme is %v\n", index, meme)
+		// Slicing a string
+		var split = strings.Fields(meme)
+		fmt.Println(split)
+	}
+
+	// for  {
+	// 	var userMeme string
+	// 	// passing in a pointer
+	// 	fmt.Scan(&userMeme)
+
+	// 	// Array stuff
+	// 	memes = append(memes, memeName+" created the "+userMeme+" meme")
+
+	// 	remainingMemes = remainingMemes - 1
+
+	// 	fmt.Printf(memes[0])
+	// 	fmt.Printf("There are %v memes remaining\n", remainingMemes)
+
+	// 	fmt.Printf("The memes slice looks like this: %v\n", memes)
+	// 	fmt.Printf("The memes slice type is: %T\n", memes)
+	// 	fmt.Printf("The memes slice length is: %v\n", len(memes))
+	// }
+
 }
