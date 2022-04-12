@@ -13,18 +13,9 @@ func main() {
 	// uint type as opposed to int type will prevent negative numbers
 	var remainingMemes uint = 10
 
-	// Example of showing variable types
-	fmt.Printf("memeMan is %T and totalMemes is %T\n", memeName, totalMemes)
-	fmt.Println()
+	testFunction()
 
-	// Basic Println statements
-	fmt.Println("Welcome", memeName, "you have made", totalMemes, "total memes.")
-	fmt.Println("There are still", remainingMemes, "memes to make.")
-	fmt.Println()
-
-	// Another way to write the above println statements
-	fmt.Printf("Wecome %v you have made %v total memes\n", memeName, totalMemes)
-	fmt.Printf("There are still %v memes to make.\n", remainingMemes)
+	introMeme(memeName, totalMemes, remainingMemes)
 
 	var memes []string
 	memes = append(memes, "Meme 1", "Meme 2", "Meme 3")
@@ -62,4 +53,31 @@ func main() {
 		fmt.Println("More than 3 memes")
 	}
 
+	thing := "Bruh"
+
+	switch thing {
+	case "Bro":
+		fmt.Printf("Thing is Bro\n")
+		break
+	case "Bruh":
+		fmt.Printf("Thing is Bruh\n")
+		break
+	default:
+		fmt.Println("NO")
+	}
+}
+
+func testFunction() {
+	fmt.Println("This is an example function")
+}
+
+func introMeme(name string, total int, remaining uint) {
+	// Basic Println statements
+	fmt.Println("Welcome", name, "you have made", total, "total memes.")
+	fmt.Println("There are still", remaining, "memes to make.")
+	fmt.Println()
+
+	// Another way to write the above println statements
+	fmt.Printf("Wecome %v you have made %v total memes\n", name, total)
+	fmt.Printf("There are still %v memes to make.\n", remaining)
 }
