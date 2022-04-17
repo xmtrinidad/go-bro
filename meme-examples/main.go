@@ -81,3 +81,15 @@ func introMeme(name string, total int, remaining uint) {
 	fmt.Printf("Wecome %v you have made %v total memes\n", name, total)
 	fmt.Printf("There are still %v memes to make.\n", remaining)
 }
+
+// example function with type array returning a string
+func thing(myArray []string) string {
+	return "memes array"
+}
+
+// Return multiple values
+
+func returnMultipleThings() (string, int, []string) {
+	var things []string
+	return "thing", 1, append(things, "test 1", "test2")
+}
