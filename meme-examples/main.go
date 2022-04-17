@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+	// Importing another file uses the module-name/file.go convention
+	"meme-example/helper"
 	"strings"
 )
 
@@ -18,7 +20,10 @@ func main() {
 
 	testFunction()
 	fmt.Println()
-	helperFunction()
+	// Function from another package
+	helper.HelperFunction()
+	fmt.Println()
+	helper.MapExample()
 
 	introMeme(memeName, totalMemes, remainingMemes)
 
