@@ -5,6 +5,9 @@ import (
 	"strings"
 )
 
+// Package level variables
+var packageLevelVariable = "Test Thing"
+
 func main() {
 	// Shorthand way to declare var and infer type
 	memeName := "Meme Man"
@@ -14,6 +17,8 @@ func main() {
 	var remainingMemes uint = 10
 
 	testFunction()
+	fmt.Println()
+	helperFunction()
 
 	introMeme(memeName, totalMemes, remainingMemes)
 
@@ -68,6 +73,7 @@ func main() {
 }
 
 func testFunction() {
+	fmt.Printf("This is a package level variable %v", packageLevelVariable)
 	fmt.Println("This is an example function")
 }
 
