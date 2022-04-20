@@ -7,6 +7,18 @@ import (
 	"strings"
 )
 
+type MemeData struct {
+	username      string
+	numberOfMemes int
+	isMeme        bool
+}
+
+var memeData = MemeData{
+	username:      "meme_man",
+	numberOfMemes: 1,
+	isMeme:        true,
+}
+
 // Package level variables
 var packageLevelVariable = "Test Thing"
 
